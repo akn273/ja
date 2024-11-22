@@ -10,17 +10,19 @@
   <name>jmp-parent</name>
   <url>http://maven.apache.org</url>
   <modules>
+    <module>jmp-dto</module>
     <module>jmp-bank-api</module>
     <module>jmp-service-api</module>
     <module>jmp-cloud-bank-impl</module>
     <module>jmp-cloud-service-impl</module>
-    <module>jmp-dto</module>
     <module>jmp-app</module>
   </modules>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
 
   <dependencies>
     <dependency>

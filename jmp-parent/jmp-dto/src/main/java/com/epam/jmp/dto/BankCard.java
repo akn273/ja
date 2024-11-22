@@ -1,6 +1,7 @@
 package com.epam.jmp.dto;
 
 import java.util.Objects;
+import java.util.UUID;
 
 public class BankCard {
     private String number;
@@ -11,6 +12,14 @@ public class BankCard {
         this.user = user;
     }
 
+    public BankCard(User user){
+        this.user = user;
+        this.number = newCardNumber();
+    }
+
+    public static String newCardNumber() {
+        return UUID.randomUUID().toString();
+    }
     public String getNumber() {
         return number;
     }
