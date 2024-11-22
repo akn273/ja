@@ -38,13 +38,6 @@ public class AppTest extends TestCase {
         return new TestSuite(AppTest.class);
     }
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp() {
-        assertTrue(true);
-    }
-
     public void setUp() {
         user = new User("user1n", "user2sn", LocalDate.of(2000, 1, 1));
         bank = new BankImpl();
