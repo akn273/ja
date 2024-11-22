@@ -3,11 +3,13 @@ package com.epam.jmp.dto;
 import java.util.Objects;
 
 public class DebitBankCard extends BankCard {
+
+    private final static  double DEFAULT_DEBIT_LIMIT = 0;
     private double balance;
 
-    public DebitBankCard(String number, User user, double balance) {
-        super(number, user);
-        this.balance = balance;
+    public DebitBankCard( User user) {
+        super(user);
+        this.balance = DEFAULT_DEBIT_LIMIT;
     }
 
     public double getBalance() {

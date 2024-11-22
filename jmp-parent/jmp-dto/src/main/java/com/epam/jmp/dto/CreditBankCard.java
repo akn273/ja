@@ -1,13 +1,15 @@
 package com.epam.jmp.dto;
 
 import java.util.Objects;
+import java.util.UUID;
 
 public class CreditBankCard extends BankCard {
-    private double creditLimit;
+    private final static  double DEFAULT_CREDIT_LIMIT = 100;
 
-    public CreditBankCard(String number, User user, double creditLimit) {
-        super(number, user);
-        this.creditLimit = creditLimit;
+    private double creditLimit;
+    public CreditBankCard(User user) {
+        super(user);
+        this.creditLimit = DEFAULT_CREDIT_LIMIT;
     }
 
     public double getCreditLimit() {
